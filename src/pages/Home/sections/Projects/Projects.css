@@ -1,0 +1,341 @@
+.projects {
+    width: 100%;
+}
+
+.projects-header {
+    margin-bottom: 4rem;
+}
+
+.projects-description {
+    max-width: 650px;
+
+    margin-top: 1.5rem;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+.projects-grid.show-all .project-card:nth-child(3) {
+    animation: projectReveal 0.5s ease both;
+    animation-delay: 0.05s;
+}
+
+.projects-grid.show-all .project-card:nth-child(4) {
+    animation: projectReveal 0.5s ease both;
+    animation-delay: 0.15s;
+}
+
+.projects-grid.show-all .project-card:nth-child(5) {
+    animation: projectReveal 0.5s ease both;
+    animation-delay: 0.25s;
+}
+
+.projects-grid.show-all .project-card:nth-child(6) {
+    animation: projectReveal 0.5s ease both;
+    animation-delay: 0.35s;
+}
+
+.project-card {
+    overflow: hidden;
+    
+    background-color: var(--surface);
+    
+    border: 1px solid var(--surface-light); 
+    border-radius: 1rem;
+    
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-hidden {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--primary);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+
+    height: 260px;
+    
+    overflow: hidden;
+    
+    background-color: var(--background);
+}
+
+.project-image img {
+    width: 100%;
+
+    height: 100%;
+    
+    display: block;
+    
+    object-fit: cover;
+    
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.04);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-type {
+    display: inline-block;
+
+    margin-bottom: .5rem;
+
+    color: var(--primary);
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+}
+
+.project-title {
+    margin: 0.3rem 0 0.75rem;
+    
+    color: var(--text-primary);
+    
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-semibold);
+}
+
+.project-description {
+    margin-top: 0;
+    
+    color: var(--text-secondary);
+    
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    line-height: 1.6;
+}
+
+.project-technologies { 
+    display: flex;
+
+    flex-wrap: wrap;
+    
+    gap: .5rem;
+    
+    margin-top: 1.25rem;
+}
+
+.project-technologies span { 
+    padding: .35rem .75rem;
+    
+    color: var(--text-secondary);
+
+    background-color: var(--background);
+
+    border: 1px solid var(--surface-light);
+    border-radius: 999px;
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+}
+
+.project-actions {
+    display: flex;
+
+    align-items: center;
+    
+    gap: 1rem;
+    
+    margin-top: 1.5rem;
+}
+
+.project-link {
+    color: var(--text-primary);
+    
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    
+    transition: 
+        transform .3s ease,
+        color .3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary); 
+
+    transform: translateY(-1px);
+}
+
+.project-link-primary {
+    padding: .7rem 1rem;
+    
+    color: var(--background);
+    
+    background-color: var(--primary);
+    
+    border-radius: 7px;
+}
+
+.project-link-primary:hover {
+    color: var(--background);
+}
+
+.project-more {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 3.5rem;
+}
+
+.projects-more-button {
+    padding: .8rem 1.5rem;
+
+    background-color: transparent;
+
+    border: 1px solid var(--text-secondary);
+    border-radius: 8px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-semibold);
+
+    cursor: pointer;
+
+    transition: 
+        border-color .3s ease,
+        color .3s ease,
+        transform .5s ease;
+}
+
+.projects-more-button:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+    
+    transform: translateY(-2px);
+}
+
+
+@keyframes projectReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .projects-grid {
+        gap: 1.5rem;
+    }
+    
+    .project-image {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .projects-header {
+        margin-bottom: 3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-content {
+        padding: 1.25rem;
+    }
+
+    .project-actions {
+        gap: 1.5rem;
+    }
+
+    .project-card:nth-child(n + 2) {
+        display: none;
+    }
+
+    .projects-grid.show-all .project-card {
+        display: block;
+    }
+
+    .projects-grid.show-all .project-card:nth-child(2) {
+        animation: projectReveal 0.5s ease both;
+        animation-delay: 0.05s;
+    }
+
+    .projects-grid.show-all .project-card:nth-child(3) {
+        animation: projectReveal 0.5s ease both;
+        animation-delay: 0.15s;
+    }
+
+    .projects-grid.show-all .project-card:nth-child(4) {
+        animation: projectReveal 0.5s ease both;
+        animation-delay: 0.25s;
+    }
+
+    .projects-grid.show-all .project-card:nth-child(5) {
+        animation: projectReveal 0.5s ease both;
+        animation-delay: 0.35s;
+    }
+
+    .projects-grid.show-all .project-card:nth-child(6) {
+        animation: projectReveal 0.5s ease both;
+        animation-delay: 0.45s;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .projects-header {
+        margin-bottom: 2.3rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-description {
+        font-size: var(--fs-md);
+    }
+
+    .project-content {
+        padding: 1.25rem;
+    }
+
+    .project-actions {
+        gap: 1.5rem;
+    }
+}

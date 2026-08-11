@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --background: #101010;
+  --navbar-background: rgba(20, 20, 20, 0.8);
+
+  --surface: #181818;
+  --surface-light: #222222;
+
+  --primary: #abdb25;
+  --primary-hover: #c1ef3b;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  --font-secondary: "Manrope", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 2.5rem;
+  --fs-5xl: 3.5rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+[data-theme="light"] {
+  --background: #f5f5f3;
+  --surface: #ffffff;
+  --surface-light: #dddddd;
+
+  --primary: #6f9700;
+  --primary-hover: #8abc00;
+
+  --text-primary: #171717;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+
+  --navbar-background: rgba(245, 245, 243, 0.8);
+}
