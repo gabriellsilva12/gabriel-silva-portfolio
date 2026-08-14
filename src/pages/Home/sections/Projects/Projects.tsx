@@ -5,54 +5,38 @@ import { useState } from "react";
 import type { Project } from "../../../../types/project";
 
 export default function Projects() {
-
-  const [showAll, setShowAll] = useState(false)
+  const [showAll, setShowAll] = useState(false);
 
   const visibleProjects = project;
-
-  const handleToggleProjects = () => {
-    if(showAll) {
-      document.querySelector(".projects")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      })
-    }
-
-    setShowAll(!showAll)
-  }
 
   return (
     <section className="projects section" id="projects">
       <Container>
         <div className="projects-header">
-          <span className="section-label">Projetos</span>
+          <span className="section-label">Projects</span>
 
           <h2 className="section-title">
-            Projetos que transformam
-            <span> Ideias em código</span>
+            Projects that turn
+            <span> ideas into code</span>
           </h2>
 
           <p className="projects-description">
-            Alguns dos projetos que desenvolvi, explorando diferentes
-            tecnologias para criar aplicações modernas, responsivas e
-            funcionais.
+            A selection of projects I have built, exploring different
+            technologies to create modern, responsive, and functional
+            applications.
           </p>
         </div>
 
-        <div className={`projects-grid ${showAll && "show-all"}`}>
-
+        <div className={`projects-grid ${showAll ? "show-all" : ""}`}>
           {visibleProjects.map((project: Project, index: number) => (
-
-            <article 
-              className={`project-card ${!showAll && index >= 2 ? "project-hidden" : ""}`}
+            <article
+              className={`project-card ${
+                !showAll && index >= 2 ? "project-hidden" : ""
+              }`}
               key={project.title}
             >
-              
               <div className="project-image">
-                <img
-                  src={project.image}
-                  alt={`preview de ${project.title}`}
-                />
+                <img src={project.image} alt={`Preview of ${project.title}`} />
               </div>
 
               <div className="project-content">
@@ -69,39 +53,47 @@ export default function Projects() {
                 </div>
 
                 <div className="project-actions">
-                  <a 
-                    href={project.demo} 
+                  <a
+                    href={project.demo}
                     className="project-link project-link-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Ver projeto
+                    View project
                   </a>
 
                   <a
                     href={project.github}
                     className="project-link"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Github
+                    GitHub
                   </a>
                 </div>
               </div>
-
             </article>
           ))}
-
         </div>
+
         {project.length > 0 && (
           <div className="project-more">
-
-            <button 
-              className="projects-more-button"
-              onClick={handleToggleProjects}
-            >
-              {showAll ? "Ver menos" : "Ver mais projetos"}
-            </button>
-
+            {showAll ? (
+              <a
+                href="#projects"
+                className="projects-more-button"
+                onClick={() => setShowAll(false)}
+              >
+                Show less
+              </a>
+            ) : (
+              <button
+                className="projects-more-button"
+                onClick={() => setShowAll(true)}
+              >
+                View more projects
+              </button>
+            )}
           </div>
         )}
       </Container>

@@ -3,44 +3,48 @@ import type { Project } from "../types/project";
 export const project: Project[] = [
   {
     title: "Weather App",
-    type: "Aplicação Web",
+    type: "Web Application",
     description:
-      "Aplicação web para consulta de informações meteorológicas em tempo real.",
+      "A web application for checking real-time weather information.",
     technologies: ["React", "TypeScript", "API"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },
 
   {
     title: "Task Manager",
-    type: "Aplicação Web",
+    type: "Web Application",
     description:
-      "Aplicação para gerenciamento de tarefas com criação, organização e acompanhamento de atividades.",
+      "A task management application for creating, organizing, and tracking activities.",
     technologies: ["React", "JavaScript", "CSS"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },
 
   {
     title: "E-commerce",
-    type: "Aplicação Web",
+    type: "Web Application",
     description:
-      "Interface de uma loja virtual com catálogo de produtos, navegação e carrinho de compras.",
+      "An e-commerce interface featuring product browsing, navigation, and shopping cart functionality.",
     technologies: ["React", "TypeScript", "CSS"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },
 
   {
     title: "Blog Platform",
-    type: "Aplicação Web",
+    type: "Web Application",
     description:
-      "Plataforma para publicação e organização de conteúdos com uma interface simples e responsiva.",
+      "A platform for publishing and organizing content through a clean and responsive interface.",
     technologies: ["React", "Node.js", "Express"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },
@@ -49,9 +53,10 @@ export const project: Project[] = [
     title: "Analytics Dashboard",
     type: "Dashboard",
     description:
-      "Dashboard para visualização de métricas e informações através de uma interface organizada.",
+      "A dashboard for visualizing metrics and data through a clean and organized interface.",
     technologies: ["React", "TypeScript", "Charts"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },
@@ -60,9 +65,10 @@ export const project: Project[] = [
     title: "REST API",
     type: "Back-end",
     description:
-      "API REST para gerenciamento de dados, autenticação e comunicação com banco de dados.",
+      "A REST API for data management, authentication, and database communication.",
     technologies: ["Node.js", "Express", "MongoDB"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4_6N8w_f1UEzSVNfbLnJ0Ih2_QTsXGWY8IA2xIfRa-A&s=10",
     demo: "#",
     github: "#",
   },

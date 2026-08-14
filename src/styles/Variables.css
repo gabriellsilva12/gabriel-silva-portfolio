@@ -36,16 +36,16 @@
 }
 
 [data-theme="light"] {
-  --background: #f5f5f3;
+  --background: #f3f3f0;
   --surface: #ffffff;
-  --surface-light: #dddddd;
+  --surface-light: #e2e2de;
 
-  --primary: #6f9700;
-  --primary-hover: #8abc00;
+  --primary: #5f8200;
+  --primary-hover: #759f00;
 
   --text-primary: #171717;
-  --text-secondary: #555555;
-  --text-muted: #777777;
+  --text-secondary: #444444;
+  --text-muted: #666666;
 
-  --navbar-background: rgba(245, 245, 243, 0.8);
+  --navbar-background: rgba(243, 243, 240, 0.88);
 }

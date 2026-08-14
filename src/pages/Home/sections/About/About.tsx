@@ -6,11 +6,11 @@ export default function About() {
     <section className="about section" id="about">
       <Container>
         <div className="about-header">
-          <span className="section-label">Sobre mim</span>
+          <span className="section-label">About me</span>
 
           <h2 className="section-title">
-            Conheça um pouco
-            <span> sobre mim</span>
+            Get to know a little
+            <span> about me</span>
           </h2>
         </div>
 
@@ -27,19 +27,18 @@ export default function About() {
 
           <div className="about-info">
             <h3>
-              <h3>Desenvolvedor focado em criar aplicações web modernas.</h3>
+              Front-end developer focused on building modern web applications.
             </h3>
 
             <p>
-              Desenvolvo aplicações web com foco em interfaces modernas,
-              responsivas e funcionais, buscando sempre unir uma boa experiência
-              de usuário com código organizado e soluções eficientes.
+              I build web applications with a focus on modern, responsive, and
+              functional interfaces, always aiming to combine a great user
+              experience with clean code and efficient solutions.
             </p>
 
             <p>
-              Minha atuação é voltada principalmente para o desenvolvimento
-              Front-end, com conhecimentos também em Back-end, APIs e integração
-              com bancos de dados.
+              My main focus is Front-end development, with additional knowledge
+              of Back-end development, APIs, and database integration.
             </p>
           </div>
         </div>

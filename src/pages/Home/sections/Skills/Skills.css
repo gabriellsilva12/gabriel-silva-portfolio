@@ -1,0 +1,128 @@
+.skills {
+    width: 100%;
+}
+
+.skills-header {
+    margin-bottom: 4rem;
+}
+
+.skills-description {
+    max-width: 650px;
+
+    margin-top: 1.5rem;
+
+    color: var(--text-secondary);
+}
+
+.skills-content {    
+    display: flex;
+    flex-direction: row;
+    
+    gap: 3rem;
+}
+
+.skill-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.25rem;
+}
+
+.skill-category {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+}
+
+.skill-item {
+    display: inline-flex;
+    align-items: center;
+
+    padding: .65rem 1rem;
+
+    color: var(--text-secondary);
+    background-color: var(--surface);
+
+    border: 1px solid var(--surface-light);
+    border-right: 1px solid var(--primary);
+    border-radius: 8px;
+
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+
+    transition: 
+        color .3s ease,
+        border-color .3s ease,
+        background-color .3s ease,
+        transform .3s ease;
+
+        cursor: crosshair;
+}
+
+.skill-item:hover {
+    color: var(--primary);
+    
+    border-color: var(--primary);
+    
+    background-color: var(--surface-light);
+    
+    transform: translateY(-2px);
+}
+
+.skill-item:active {
+    transform: scale(.97);
+}
+
+@media (max-width: 768px) {
+    .skills-header {
+        margin-bottom: 3rem;
+    }
+
+    .skills-content {
+        flex-direction: column;        
+        gap: 2rem;
+    }
+
+    .skill-group {
+        gap: 1rem;
+    }
+
+    .skills-list {
+        gap: .6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .skills-header {
+        margin-bottom: 2.3rem;
+    }
+
+    .skills-description {
+        font-size: var(--fs-md);
+    }
+
+    .skills-content {
+        gap: 2.2rem;
+    }
+
+    .skill-item {
+        user-select: none;
+        -webkit-user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+        padding: .6rem .75rem;  
+    }
+}

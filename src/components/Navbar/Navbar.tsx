@@ -1,37 +1,30 @@
 import { useEffect, useState } from "react";
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from "lucide-react";
 import Container from "../Container/Container";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "dark";
+  });
 
   function toggleMenu() {
     setIsMenuOpen((prev) => !prev);
-    console.log(isMenuOpen);
-  }
-
-  function toggleTheme() {
-    setIsDark((prev) => {
-      const newtheme = !prev;
-
-      document.documentElement.setAttribute(
-        "data-theme",
-        newtheme ? "dark" : "light",
-      );
-
-      return newtheme;
-    });
   }
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : ""
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
 
     return () => {
-      document.body.style.overflow = ""
-    }
-  }, [isMenuOpen])
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="navbar">
@@ -51,6 +44,12 @@ export default function Navbar() {
             <li>
               <a href="#about" onClick={() => setIsMenuOpen(false)}>
                 About
+              </a>
+            </li>
+
+            <li>
+              <a href="#skills" onClick={() => setIsMenuOpen(false)}>
+                Skills
               </a>
             </li>
 
@@ -85,8 +84,11 @@ export default function Navbar() {
             <span className="menu-row"></span>
           </button>
 
-          <button className={`theme-button ${isMenuOpen && "theme-mobile-active"}`} onClick={toggleTheme}>
-            {isDark ? <Moon /> : <Sun />}
+          <button
+            className={`theme-button ${isMenuOpen && "theme-mobile-active"}`}
+            onClick={() => setTheme((prev) => prev === "dark" ? "light" : "dark")}
+          >
+            {theme === "dark" ? <Moon /> : <Sun />}
           </button>
         </div>
       </Container>

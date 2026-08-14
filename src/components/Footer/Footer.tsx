@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <h2>Gabriel Silva</h2>
-            <p>Desenvolvedor Front-end</p>
+            <p>Front-end Developer</p>
           </div>
 
           <div className="footer-links">
@@ -29,20 +29,16 @@ export default function Footer() {
               LinkedIn
             </a>
 
-            <a
-              href={social.email}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={social.email}>
               Email
             </a>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 Gabriel</span>
+          <span>© 2026 Gabriel Silva</span>
 
-          <span>Feito com React + TypeScript</span>
+          <span>Built with React + TypeScript</span>
         </div>
       </Container>
     </footer>

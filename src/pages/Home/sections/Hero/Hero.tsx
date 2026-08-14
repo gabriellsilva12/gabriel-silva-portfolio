@@ -8,24 +8,31 @@ export default function Hero() {
       <Container>
         <div className="hero-content">
           <div className="hero-text">
-            <span className="hero-greeting">Olá, me chamo Gabriel Silva</span>
+            <span className="hero-greeting">
+              Hi, I'm Gabriel Silva
+            </span>
 
             <h1 className="hero-title">
-              Desenvolvedor
-              <span> Front-end</span>
+              Front-end
+              <span> Developer</span>
             </h1>
 
             <p className="hero-description">
-              Desenvolvedor focado em criar aplicações web modernas, responsivas
-              e funcionais.
+              Front-end developer focused on building modern, responsive,
+              and functional web applications.
             </p>
 
             <div className="hero-actions">
               <a href="#projects" className="hero-button-primary">
-                Ver projetos
+                View projects
               </a>
 
-              <a href={social.github} target="_blank" className="hero-button-secondary">
+              <a
+                href={social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-button-secondary"
+              >
                 GitHub
               </a>
             </div>
