@@ -26,9 +26,11 @@ html {
   scroll-behavior: smooth;
 }
 
-p,span,li {
+p,
+span,
+li {
   font-family: var(--font-primary);
-} 
+}
 
 a {
   text-decoration: none;
@@ -41,25 +43,28 @@ button {
 }
 
 .section {
-    width: 100%;
-    padding: 100px 0;
+  width: 100%;
+  padding: 100px 0;
 }
 
 @media (max-width: 1024px) {
-    .section {
-        padding: 80px 0;
-    }
+  .section {
+    padding: 80px 0;
+    scroll-margin-top: 0px;
+  }
 }
 
 @media (max-width: 768px) {
-    .section {
-        padding: 64px 0;
-    }
+  .section {
+    padding: 64px 0;
+    scroll-margin-top: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    .section {
-        padding: 48px 0;
-        overflow-x: hidden;
-    }
+  .section {
+    padding: 48px 0;
+    scroll-margin-top: 40px;
+    overflow-x: hidden;
+  }
 }

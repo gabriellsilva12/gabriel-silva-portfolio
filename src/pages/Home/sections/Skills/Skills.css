@@ -1,5 +1,6 @@
 .skills {
     width: 100%;
+    scroll-margin-top: 90px;
 }
 
 .skills-header {
@@ -86,15 +87,16 @@
 }
 
 @media (max-width: 768px) {
+    
     .skills-header {
         margin-bottom: 3rem;
     }
-
+    
     .skills-content {
         flex-direction: column;        
         gap: 2rem;
     }
-
+    
     .skill-group {
         gap: 1rem;
     }
@@ -102,27 +104,33 @@
     .skills-list {
         gap: .6rem;
     }
+    .skills {
+        scroll-margin-top: 90px;
+    }
 }
 
 @media (max-width: 480px) {
-    
     .skills-header {
         margin-bottom: 2.3rem;
     }
-
+    
     .skills-description {
         font-size: var(--fs-md);
     }
-
+    
     .skills-content {
         gap: 2.2rem;
     }
-
+    
     .skill-item {
         user-select: none;
         -webkit-user-select: none;
-
         -webkit-tap-highlight-color: transparent;
         padding: .6rem .75rem;  
     }
+
+    .skills {
+        scroll-margin-top: 90px;
+    }
 }
+
