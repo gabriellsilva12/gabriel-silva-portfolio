@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Container from "../../../../components/Container/Container";
 import SkillsData from "../../../../data/Skills";
 
@@ -6,8 +7,37 @@ import "./Skills.css";
 export default function Skills() {
   const categories = ["Frontend", "Backend", "Tools"] as const;
 
+  const [isVisible, setIsVisible] = useState(false);
+  const skillsRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const element = skillsRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="skills" id="skills">
+    <section
+      ref={skillsRef}
+      className={`skills skills-animate ${isVisible ? "is-visible" : ""}`}
+      id="skills"
+    >
       <Container>
         <div className="skills-header">
           <span className="section-label">Skills</span>
@@ -28,13 +58,13 @@ export default function Skills() {
               <h3 className="skill-category">{category}</h3>
 
               <div className="skills-list">
-                {SkillsData.filter(
-                  (skill) => skill.category === category
-                ).map((skill) => (
-                  <span className="skill-item" key={skill.name}>
-                    {skill.name}
-                  </span>
-                ))}
+                {SkillsData.filter((skill) => skill.category === category).map(
+                  (skill) => (
+                    <span className="skill-item" key={skill.name}>
+                      {skill.name}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           ))}

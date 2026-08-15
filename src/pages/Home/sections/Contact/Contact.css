@@ -1,5 +1,6 @@
 .contact {
     width: 100%;
+    overflow: clip;
 }
 
 .contact-header {
@@ -49,6 +50,28 @@
     flex-direction: column;
 
     gap: .6rem;    
+}
+
+.contact .contact-form,
+.contact .contact-info {
+  opacity: 0;
+}
+
+.contact .contact-form {
+  transform: translateX(-60px);
+}
+
+.contact .contact-info {
+  transform: translateX(60px);
+}
+
+.contact.is-visible .contact-form {
+  animation: contactFormEnter 0.9s ease forwards;
+}
+
+.contact.is-visible .contact-info {
+  animation: contactInfoEnter 1.3s ease forwards;
+  animation-delay: 0.15s;
 }
 
 .contact-field label {
@@ -209,6 +232,30 @@
 
 .contact-item a:hover {
     color: var(--primary);
+}
+
+@keyframes contactFormEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes contactInfoEnter {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 1024px) {

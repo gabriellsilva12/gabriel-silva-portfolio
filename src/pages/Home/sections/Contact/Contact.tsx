@@ -2,13 +2,17 @@ import "./Contact.css";
 import Container from "../../../../components/Container/Container";
 import { social } from "../../../../data/socials";
 import { useForm } from "@formspree/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xgawzppo");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const [isVisible, setIsVisible] = useState(false);
+  const contactRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleStatesForm = () => {
@@ -22,8 +26,34 @@ export default function Contact() {
     handleStatesForm();
   }, [state.succeeded]);
 
+  useEffect(() => {
+    const element = contactRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="contact section" id="contact">
+    <section
+      ref={contactRef}
+      className={`contact section ${isVisible ? "is-visible" : ""}`}
+      id="contact"
+    >
       <Container>
         <div className="contact-header">
           <span className="section-label">Contact</span>

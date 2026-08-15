@@ -29,6 +29,27 @@
     gap: 1.25rem;
 }
 
+.skills-animate .skill-group {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.skills-animate.is-visible .skill-group {
+  animation: skillGroupEnter 1s ease forwards;
+}
+
+.skills-animate.is-visible .skill-group:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.skills-animate.is-visible .skill-group:nth-child(2) {
+  animation-delay: .6s;
+}
+
+.skills-animate.is-visible .skill-group:nth-child(3) {
+  animation-delay: .9s;
+}
+
 .skill-category {
     margin: 0;
 
@@ -84,6 +105,18 @@
 
 .skill-item:active {
     transform: scale(.97);
+}
+
+@keyframes skillGroupEnter {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {

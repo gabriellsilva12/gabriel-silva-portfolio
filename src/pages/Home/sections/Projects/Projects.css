@@ -60,6 +60,23 @@
         box-shadow 0.3s ease;
 }
 
+.projects .project-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.projects.is-visible .project-card {
+  animation: projectCardEnter 0.9s ease forwards;
+}
+
+.projects.is-visible .project-card:nth-child(1) {
+  animation-delay: .5s;
+}
+
+.projects.is-visible .project-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
 .project-hidden {
     display: none;
 }
@@ -238,6 +255,18 @@
     transform: translateY(-2px);
 }
 
+
+@keyframes projectCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes projectReveal {
     from {

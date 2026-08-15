@@ -1,7 +1,7 @@
 import "./Projects.css";
 import Container from "../../../../components/Container/Container";
 import { project } from "../../../../data/projects";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Project } from "../../../../types/project";
 
 export default function Projects() {
@@ -9,8 +9,37 @@ export default function Projects() {
 
   const visibleProjects = project;
 
+  const [isVisible, setIsVisible] = useState(false);
+  const projectsRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const element = projectsRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="projects section" id="projects">
+    <section
+      ref={projectsRef}
+      className={`projects section ${isVisible ? "is-visible" : ""}`}
+      id="projects"
+    >
       <Container>
         <div className="projects-header">
           <span className="section-label">Projects</span>
