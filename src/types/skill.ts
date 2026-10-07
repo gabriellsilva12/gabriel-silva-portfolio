@@ -1,4 +1,4 @@
 export interface Skill {
     name: string;
-    category: "Frontend" | "Backend" | "Tools"
+    category: "Frontend" | "Backend" | "Tools" | "Database"
 }

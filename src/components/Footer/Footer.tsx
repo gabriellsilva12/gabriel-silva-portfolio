@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <h2>Gabriel Silva</h2>
-            <p>Front-end Developer</p>
+            <p>Software Developer</p>
           </div>
 
           <div className="footer-links">

@@ -1,6 +1,7 @@
 import type { Skill } from "../types/skill";
 
 const Skills: Skill[] = [
+  // Frontend
   {
     name: "React",
     category: "Frontend",
@@ -26,6 +27,7 @@ const Skills: Skill[] = [
     category: "Frontend",
   },
 
+  // Backend
   {
     name: "Node.js",
     category: "Backend",
@@ -38,19 +40,26 @@ const Skills: Skill[] = [
     name: "REST API",
     category: "Backend",
   },
-  {
-    name: "MariaDB",
-    category: "Backend",
-  },
+
+  // Database
   {
     name: "MongoDB",
-    category: "Backend",
+    category: "Database",
+  },
+  {
+    name: "MariaDB",
+    category: "Database",
+  },
+  {
+    name: "SQLite",
+    category: "Database",
   },
   {
     name: "Sequelize",
-    category: "Backend",
+    category: "Database",
   },
 
+  // Tools
   {
     name: "Git",
     category: "Tools",
@@ -73,4 +82,4 @@ const Skills: Skill[] = [
   },
 ];
 
-export default Skills
+export default Skills;

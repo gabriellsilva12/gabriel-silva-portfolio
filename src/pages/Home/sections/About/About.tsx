@@ -27,18 +27,19 @@ export default function About() {
 
           <div className="about-info">
             <h3>
-              Front-end developer focused on building modern web applications.
+              Software developer focused on building modern web applications.
             </h3>
 
             <p>
-              I build web applications with a focus on modern, responsive, and
-              functional interfaces, always aiming to combine a great user
-              experience with clean code and efficient solutions.
+              I build web applications with React and TypeScript on the
+              front-end, focusing on modern, responsive, and functional
+              interfaces.
             </p>
 
             <p>
-              My main focus is Front-end development, with additional knowledge
-              of Back-end development, APIs, and database integration.
+              I also work with Node.js and Express on the back-end, building
+              REST APIs, authentication systems, and database-driven
+              applications.
             </p>
           </div>
         </div>

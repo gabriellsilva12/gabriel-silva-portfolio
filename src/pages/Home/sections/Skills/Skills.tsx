@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
+
 import Container from "../../../../components/Container/Container";
 import SkillsData from "../../../../data/Skills";
 
 import "./Skills.css";
 
 export default function Skills() {
-  const categories = ["Frontend", "Backend", "Tools"] as const;
+  const categories = ["Frontend", "Backend", "Database", "Tools"] as const;
 
   const [isVisible, setIsVisible] = useState(false);
+
   const skillsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -47,8 +49,8 @@ export default function Skills() {
           </h2>
 
           <p className="skills-description">
-            Technologies and tools I use to build modern, responsive, and
-            functional applications.
+            Technologies and tools I use to build modern web applications,
+            from user interfaces to backend APIs.
           </p>
         </div>
 

@@ -8,18 +8,16 @@ export default function Hero() {
       <Container>
         <div className="hero-content">
           <div className="hero-text">
-            <span className="hero-greeting">
-              Hi, I'm Gabriel Silva
-            </span>
+            <span className="hero-greeting">Hi, I'm Gabriel Silva</span>
 
             <h1 className="hero-title">
-              Front-end
+              Software
               <span> Developer</span>
             </h1>
 
             <p className="hero-description">
-              Front-end developer focused on building modern, responsive,
-              and functional web applications.
+              Building modern web applications with React, TypeScript, Node.js,
+              and REST APIs.
             </p>
 
             <div className="hero-actions">
